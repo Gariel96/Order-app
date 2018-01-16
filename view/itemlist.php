@@ -13,20 +13,36 @@
 	</style>
 </head>
 <body> -->
-	<div class="container">
-		<table>
-			<tbody><tr ><td class="col-md-4 tag">Name</td><td class="col-md-4 tag" >NSS</td><td class="col-md-4 tag">Description</td><td class="col-md-4 tag">Price</td></tr></tbody>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table">
+            <tbody>
+            <tr>
+                <td class=" tag">Name</td>
+                <td class=" tag">Description</td>
+                <td class=" tag">Price</td>
+            </tr>
+            </tbody>
 
-			
+            <?php
 
+            foreach ($items as $item) { ?>
 
-			<?php 
+                <tr>
+                    <td><a href="index.php?item=<?php echo $item['ITEM'] ?>"><?php echo $item['ITEM'] ?></a></td>
 
-				foreach ($items as $name => $item) {
-					echo '<tr><td><a href="index.php?item='.$item->name.'">'.$item->name.'</a></td><td>'.$item->nss.'</td><td>'.$item->des.'</td><td>'.$item->price.'</td></tr>';
-				}
-			 	?>
-		</table>
-	</div>
+                    <td>
+                        <?php echo $item['DES'] ?>
+                    </td>
+                    <td>
+                        <?php echo $item['PRICE'] ?>
+                    </td>
+                </tr>
+                <?php
+            }
+            ?>
+        </table>
+    </div>
+</div>
 <!-- </body>
 </html> -->
