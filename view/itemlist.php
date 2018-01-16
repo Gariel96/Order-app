@@ -15,33 +15,32 @@
 <body> -->
 <div class="container">
     <div class="table-responsive">
-        <table class="table">
-            <tbody>
+    <table class="table">
+        <tbody>
+        <tr>
+            <td class=" tag">Name</td>
+            <td class=" tag">Description</td>
+            <td class="tag">Price</td>
+        </tr>
+        </tbody>
+        <?php
+        foreach ($items as $item) { ?>
+
             <tr>
-                <td class=" tag">Name</td>
-                <td class=" tag">Description</td>
-                <td class=" tag">Price</td>
+                <td><a href="index.php?item=<?php echo $item['ITEM'] ?>"><?php echo $item['ITEM'] ?></a></td>
+
+                <td>
+                    <?php echo $item['DES'] ?>
+                </td>
+                <td>
+                    <?php echo $item['PRICE'] ?>
+                </td>
             </tr>
-            </tbody>
-
             <?php
+        }
+        ?>
 
-            foreach ($items as $item) { ?>
-
-                <tr>
-                    <td><a href="index.php?item=<?php echo $item['ITEM'] ?>"><?php echo $item['ITEM'] ?></a></td>
-
-                    <td>
-                        <?php echo $item['DES'] ?>
-                    </td>
-                    <td>
-                        <?php echo $item['PRICE'] ?>
-                    </td>
-                </tr>
-                <?php
-            }
-            ?>
-        </table>
+    </table>
     </div>
 </div>
 <!-- </body>
