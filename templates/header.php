@@ -14,14 +14,14 @@
   </head>
   <body>
     <!-- Begin top-bar -->
-    <div class="top-bar ">
-      <nav class="navbar navbar-fixed-top">
+
+      <nav class="navbar fixed-top top-bar">
         <div class="navbar-header"><a href="" class="navbar-brand">Option</a></div>
         
           <div><i class="fa fa-2x fa-credit-card" aria-hidden="true"></i></div>
        
       </nav>
-    </div>
+
     <!-- End top-bar -->
 
   <!-- main-content -->
