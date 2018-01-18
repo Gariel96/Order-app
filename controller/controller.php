@@ -14,8 +14,7 @@ class Controller
         $modelCat = $this->model = new Model();
     }
 
-    public function invoke()
-    {
+    public function getCatagory(){
         $modelCat = $this->model = new Model();
         if (!isset($_GET['cat'])) {
             //Lấy thông tin danh mục sản phẩm
@@ -24,9 +23,6 @@ class Controller
         }
     }
 
-    /**
-     *
-     */
     function getItem()
     {
         $modelCat = $this->model = new Model();
