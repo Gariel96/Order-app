@@ -27,7 +27,7 @@ class Model
     {
         //Lấy dữ liệu từ getitemlist
         global $pdo;
-        $getItem = 'SELECT * FROM `item` WHERE `ID_CAT` = $idCat';
+        $getItem = "SELECT * FROM `item` WHERE `ID_CAT` = $idCat ";
         return $q = $pdo->query($getItem);
     }
 
